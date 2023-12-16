@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid home_div">
+    <div class="row">
+        <div class="col-8">
+
+        </div>
+        <div class="col-4">
+            <h3 class="underlined-text">TrustBankingOnline</h3>
+            <p>Trust in Every Transaction</p>
+            <a href="{% url 'credentials:login' %}" class="btn btn-primary my_button"><b>LOGIN</b></a>
+<!--            <h2>Welcome to a banking experience redefined for you. Explore seamless services, personalized solutions, and trust in every transaction on our platform.</h2>-->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

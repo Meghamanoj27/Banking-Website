@@ -1,0 +1,48 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="font-family: 'Hedvig Letters Serif', serif;">
+  <div class="container-fluid">
+     <a class="navbar-brand" href="#">
+      <img src="{% static 'img/logo.png' %}" alt="BankLogo" height="40">
+    </a>
+    <a class="navbar-brand" href="{% url 'index' %}">TrustBankingOnline</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}">Home</a>
+        </li>
+
+        {% if user.is_authenticated %}
+        <li>hello {{user.username}}</li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'credentials:logout' %}">Logout</a>
+        </li>
+        {% else %}
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'credentials:login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'credentials:register' %}">Register</a>
+        </li>
+        {% endif %}
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Branch
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur">Kannur</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">Kozhikode</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Idukki_district">Idukki</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam">Kottayam</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kollam">Kollam</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>

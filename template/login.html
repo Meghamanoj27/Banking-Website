@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+  <style>
+ body {
+      font-family: Arial, sans-serif;
+      font-family: 'Hedvig Letters Serif', serif;
+    }
+
+
+</style>
+<div class=" form_bg">
+    <div class="form_container">
+  <div class="login-container ">
+        <h2>Login Form</h2>
+
+
+        <form action="login" method="post">
+    {% csrf_token %}
+    <label>Username:</label>
+    <input type="text" name="username">
+    <label>Password:</label>
+    <input type="password" name="password">
+    <input type="submit">
+
+
+</form>
+      <p style="color:black;">Don't have an account? <a href="{% url 'credentials:register' %}">Sign up here</a>.</p>
+  {% for i in messages %}
+            <div class="error">{{ i }}</div>
+        {% endfor %}
+  </div>
+        </div>
+ </div>
+{% endblock %}

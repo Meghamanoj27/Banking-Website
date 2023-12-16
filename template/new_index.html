@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .my_home {
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696229_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 540px;
+<!--  border: 1px solid #000;-->
+  margin-top:0px;
+    .first_row{
+    height:500px;
+    }
+    h2{
+    padding-top:130px;
+    }
+    .reg_btn{
+    margin-left:300px;
+    }
+
+
+
+
+
+</style>
+<div class="container-fluid my_home">
+
+    <div class="row">
+        <div class="col-7">
+               <h2><i><b>"Welcome back! We're delighted to have you here. Explore your accounts, manage transactions, and enjoy a seamless banking experience. Need assistance? Feel free to reach out. Happy banking!"</b></i></h2>
+            <a href="{% url 'account_registration' %}" class="btn btn-success reg_btn "><b>Open Registration Form</b></a>
+        </div>
+        <div class="col-5">
+
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container-fluid">
+    <h1 class="text-center">About Us</h1><br>
+    <div class="row">
+        <div class="col-7">
+            <img src="https://marketedly.com/wp-content/uploads/2021/03/public-banking-officer.jpg" alt=".." height="550px" width="750px">
+        </div>
+        <div class="col-5">
+            <h4>
+                Welcome to our financial hub, where your aspirations meet opportunities. <br><br>
+
+At our institution, we are dedicated to empowering individuals and businesses on their financial journeys. With a legacy of commitment, we strive to provide innovative and reliable financial solutions.
+<br><br>
+                <b>Why Choose Us? </b><br><br>
+
+                <b>Trust & Security: </b>Your peace of mind is our top priority. <br>
+                <b>Personalized Service:</b> Tailored solutions for your unique financial journey.<br>
+                <b>Innovation: </b>Seamlessly manage your finances with cutting-edge technology.<br><br>
+Join us on this financial journey. Your success is our mission.
+            </h4>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<br>
+
+
+<div class="container">
+<div class="row">
+        <h1 class="text-center">Services</h1>
+</div>
+<br>
+    <div class="row">
+        <div class="col-4">
+
+<div class="card" style="width: 18rem;">
+  <img src="https://www.investopedia.com/thmb/RKudtTginrHjT4KyVHHxCzpQ6_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1126878582-6d25dc6732dc464da74e99e037039238.jpg" class="card-img-top" alt="..." height="250px" width="300px">
+  <div class="card-body">
+      <h5 class="card-title"><b>Deposit Services</b></h5><br>
+    <a href="{% url 'new_index' %}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
+            </div>
+
+        <div class="col-4">
+
+    <div class="card" style="width: 18rem;">
+  <img src="https://mltfwbciccuo.i.optimole.com/w:1280/h:721/q:mauto/f:avif/https://www.evalueserve.com/wp-content/uploads/2023/04/Untitled-design-3.png" class="card-img-top" alt="..."height="250px" width="300px">
+  <div class="card-body">
+      <h5 class="card-title"><b>Lending Services</b></h5><br>
+    <a href="{% url 'new_index' %}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
+            </div>
+        <div class="col-4">
+
+    <div class="card" style="width: 18rem;">
+  <img src="https://cdn2.system1.com/eyJidWNrZXQiOiJvbS1wdWItc3RvcmFnZSIsImtleSI6IndhbGxldGdlbml1cy93cC1jb250ZW50L3VwbG9hZHMvMjAyMi8wNS9zaHV0dGVyc3RvY2tfMTIzMzk5MDQyMS5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjQwfX19" class="card-img-top" alt="..." height="250px" width="300px">
+  <div class="card-body">
+      <h5 class="card-title"><b>Payment and Transfer Services</b></h5>
+    <a href="{% url 'new_index' %}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+
+    <br>
+
+
+<div class="container">
+<div class="row">
+        <h1 class="text-center">Branches</h1>
+</div>
+<br>
+    <div class="row">
+        <div class="col-4">
+
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn.britannica.com/26/183226-050-0CD2C18E/Second-Bank-of-the-United-States-part.jpg" class="card-img-top" alt="..." height="250px" width="300px">
+  <div class="card-body">
+      <h5 class="card-title"><b>Delhi</b></h5>
+    <a href="{% url 'new_index' %}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
+            </div>
+
+        <div class="col-4">
+
+    <div class="card" style="width: 18rem;">
+  <img src="https://encyclopediavirginia.org/wp-content/uploads/2020/11/7579_8fc12ab1348c293.jpg" class="card-img-top" alt="..."height="250px" width="300px">
+  <div class="card-body">
+      <h5 class="card-title"><b>Chennai</b></h5>
+    <a href="{% url 'new_index' %}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
+            </div>
+        <div class="col-4">
+
+    <div class="card" style="width: 18rem;">
+  <img src="https://cdn.britannica.com/06/184706-050-768F840F/First-Bank-of-the-United-States-building.jpg" class="card-img-top" alt="..." height="250px" width="300px">
+  <div class="card-body">
+      <h5 class="card-title"><b>Trivandrum</b></h5>
+    <a href="{% url 'new_index' %}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+    
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block content %}
+  <style>
+ body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+
+
+
+
+     body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+<!--        background: #f2f2f2;-->
+
+
+    }
+
+      .login-container {
+        width: 360px;
+        margin: 60px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Darker shadow */
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        display: block;
+        border: none;
+        border-radius: 4px;
+        font-size: 12px;
+        transition: 0.3s;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Lighter shadow for input fields */
+    }
+
+    input[type="submit"] {
+        background: #3498db;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background: #2980b9;
+    }
+
+    .error {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+</style>
+  <div class=" form_bg">
+    <div class="form_container_reg">
+  <div class="login-container " style="font-family: 'Hedvig Letters Serif', serif;">
+        <h2>Registration Form</h2>
+
+
+        <form action="{% url 'credentials:register' %}" method="post">
+    {% csrf_token %}
+    <label>Username:</label>
+    <input type="text" name="username">
+    <label>Password:</label>
+    <input type="password" name="password">
+    <label>Conform Password:</label>
+    <input type="password" name="cpassword">
+    <input type="submit">
+
+</form>
+      {% for i in messages %}
+            <div class="error">{{ i }}</div>
+        {% endfor %}
+  </div>
+    </div>
+  </div>
+<!--<div>-->
+<!--     <h2>Bank Registration Form</h2>-->
+
+<!--  <form action="#" method="post">-->
+<!--    <label for="full_name">Full Name:</label>-->
+<!--    <input type="text" id="full_name" name="full_name" required>-->
+
+<!--    <label for="email">Email:</label>-->
+<!--    <input type="email" id="email" name="email" required>-->
+
+<!--    <label for="password">Password:</label>-->
+<!--    <input type="password" id="password" name="password" required>-->
+
+<!--    <label for="confirm_password">Confirm Password:</label>-->
+<!--    <input type="password" id="confirm_password" name="confirm_password" required>-->
+
+<!--    <button type="submit">Register</button>-->
+<!--  </form>-->
+<!--</div>-->
+
+{% endblock %}

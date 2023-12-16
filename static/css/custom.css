@@ -1,0 +1,53 @@
+.footer {
+    background-color: lightgray;
+    padding: .5px;
+    text-align: center;
+    color:black;
+  }
+.footer p{
+    color:black;
+}
+/* home page */
+.home_div {
+
+background-image: url('https://jupiter.money/blog/wp-content/uploads/2022/08/111.-Digital-banking-3.jpg');
+  height: 536px;
+  text-align: right;
+  padding-top: 30px;
+  padding-right:50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+.home_div h3,p,h2 {
+  color: white;
+}
+..home_div h4,p {
+   text-size:5px;
+}
+.underlined-text {
+    text-decoration: underline;
+  }
+ .my_button {
+    background-color: #fff; /* White background color */
+    color: #3498db; /* Blue text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  /* Hover effect for the white-button class */
+  .my_button:hover {
+    background-color: #f2f2f2; /* Light gray on hover */
+  }
+
+
+  /* register form */
+
+.login-container{
+        background-image: url('https://jupiter.money/blog/wp-content/uploads/2022/08/111.-Digital-banking-3.jpg');
+}
+

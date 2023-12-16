@@ -1,0 +1,108 @@
+.form_bg{
+background-image: url('https://wallpaperaccess.com/full/2484218.jpg');
+background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+height:526px;
+
+}
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+
+
+
+
+     body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+<!--        background: #f2f2f2;-->
+
+
+    }
+
+      .login-container {
+        width: 360px;
+        margin: 0px auto;
+        background: #fff;
+        padding: 30px;
+
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Darker shadow */
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        display: block;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: 0.3s;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Lighter shadow for input fields */
+    }
+
+    input[type="submit"] {
+        background: #3498db;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background: #2980b9;
+    }
+
+    .error {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
+.form_container{
+padding-top:57px;
+}
+.form_container_reg{
+padding-top:.5px;
+}
+
+
+*/ new_home div */
+

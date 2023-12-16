@@ -1,0 +1,157 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!-- <h2>Account Registration</h2>-->
+<!--  <form method="post" action="">-->
+<!--    {% csrf_token %}-->
+
+<!--    {{ form.as_p }}-->
+
+<!--    <label for="district">District:</label>-->
+<!--    <select id="district" name="district" required>-->
+<!--        <option>Select</option>-->
+<!--      {% for district in districts %}-->
+<!--        <option value="{{ district.id }}">{{ district.name }}</option>-->
+<!--      {% endfor %}-->
+<!--    </select>-->
+
+<!--    <label for="branch">Branch:</label>-->
+<!--    <select id="branch" name="branch" required>-->
+
+<!--    </select>-->
+
+
+<!--    <br>-->
+<!--    <button type="submit">Submit</button>-->
+<!--&lt;!&ndash;      <button type="submit">Logout</button>&ndash;&gt;-->
+<!--  </form>-->
+
+<!--  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>-->
+<!--  <script>-->
+<!--    $(document).ready(function(){-->
+<!--      $('#district').change(function(){-->
+<!--        var districtId = $(this).val();-->
+<!--        $.ajax({-->
+<!--          url: '{% url "get_branches" %}',-->
+<!--          data: {'district_id': districtId},-->
+<!--          dataType: 'json',-->
+<!--          success: function(data){-->
+<!--            var branchSelect = $('#branch');-->
+<!--            branchSelect.empty();-->
+<!--            $.each(data, function(index, item){-->
+<!--              branchSelect.append('<option value="' + item.id + '">' + item.name + '</option>');-->
+<!--            });-->
+<!--          }-->
+<!--        });-->
+<!--      });-->
+<!--    });-->
+<!--  </script>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://wallpapers.com/images/hd/4k-laptop-on-black-desk-qrlk8vcxz01kbm0h.jpg'); /* Add the URL of your background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to make the form more readable */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Hedvig Letters Serif', serif;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label, select, button {
+            width: 100%;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="">
+        {% csrf_token %}
+        <h2>Account Registration</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <label for="district">District:</label>
+        <select id="district" name="district" required>
+            <option>Select</option>
+            {% for district in districts %}
+                <option value="{{ district.id }}">{{ district.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required></select>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#district').change(function(){
+                var districtId = $(this).val();
+                $.ajax({
+                    url: '{% url "get_branches" %}',
+                    data: {'district_id': districtId},
+                    dataType: 'json',
+                    success: function(data){
+                        var branchSelect = $('#branch');
+                        branchSelect.empty();
+                        $.each(data, function(index, item){
+                            branchSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
